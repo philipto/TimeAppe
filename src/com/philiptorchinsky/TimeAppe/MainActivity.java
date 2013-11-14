@@ -30,15 +30,15 @@ public class MainActivity extends ListActivity {
 //
 //        dh = new DBAdapter (this);
 
-//       dh.insert("TeamCity training", "inactive", 0,0);
-//       dh.insert("Android Study", "inactive", 0,0);
+       dh.insert("TeamCity training", "inactive", 0,0);
+       dh.insert("Android Study", "inactive", 0,0);
 //       dh.insert("FreelancersFeed", "inactive",0,0);
 
         // GET ROWS
 
         Cursor c = dh.getAll();
 
-        int i = 4;
+        int i = 0;
         c.moveToFirst();
         if (!c.isAfterLast()) {
             do {
