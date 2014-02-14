@@ -13,6 +13,7 @@ public class MainActivity extends ListActivity {
      * Called when the activity is first created.
      */
 
+
     static public boolean isTest = false;
     private DBAdapter dh;
     private Adapter notes;
