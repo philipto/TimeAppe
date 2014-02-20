@@ -39,7 +39,8 @@ public class MainActivity extends ListActivity {
 
         Cursor c = dh.getAll();
 
-        int i = 1;
+
+        int i = 9;
         c.moveToFirst();
         if (!c.isAfterLast()) {
             do {
