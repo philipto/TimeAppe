@@ -53,7 +53,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 // check whether a click on an item changes its status, as it should be
 // status can be "active" or "inactive"
 
-        int     count;
+        int count;
         count = mListView.getAdapter().getCount();
         System.out.println(count);
         if (count != 0) {
