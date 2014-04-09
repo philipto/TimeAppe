@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 public class DBAdapter {
     public final String KEY_ROWID = "_id";
@@ -126,24 +127,14 @@ public class DBAdapter {
         return mCursor;
     }
 
-    //---updates a row---
-    public boolean update(long rowId, String project,
-                          String status, long timespent, long lastactivated) {
-        ContentValues args = new ContentValues();
-        args.put(KEY_PROJECT, project);
-        args.put(KEY_STATUS, status);
-        args.put(KEY_TIMESPENT, timespent);
-        args.put(KEY_LASTACTIVATED, lastactivated);
-        return db.update(DATABASE_TABLE, args,
-                KEY_ROWID + "=" + rowId, null) > 0;
-    }
 
     public void updateSpentTimeByProject (String project, String status,
                            long timespent) {
-        String query = "UPDATE " + DATABASE_TABLE + " SET " + KEY_TIMESPENT + "=" + timespent + "," +
-                KEY_STATUS + "='" + status + "' Where " + KEY_PROJECT + " = '" + project + "'";
+        ContentValues args = new ContentValues();
+        args.put(KEY_STATUS, status);
+        args.put(KEY_TIMESPENT, timespent);
         try {
-            db.execSQL(query);
+            db.update(DATABASE_TABLE,args,KEY_PROJECT + "='" + StringEscapeUtils.escapeJava(project) + "'",null);
         }
         catch (Exception e) {
             Toast.makeText(context, "Query to update timespent field failed "+e.getMessage(), Toast.LENGTH_LONG).show();
@@ -152,11 +143,12 @@ public class DBAdapter {
     public void updateActivatedByProject (String project, String status,
                                           long lastactivated) {
 
+        ContentValues args = new ContentValues();
+        args.put(KEY_STATUS, status);
+        args.put(KEY_TIMESPENT, lastactivated);
 
-        String query = "UPDATE " + DATABASE_TABLE + " SET " + KEY_LASTACTIVATED + "=" + lastactivated + "," +
-                KEY_STATUS + "='" + status + "' Where " + KEY_PROJECT + " = '" + project + "'";
         try {
-            db.execSQL(query);
+            db.update(DATABASE_TABLE, args, KEY_PROJECT + "='" + StringEscapeUtils.escapeJava(project) + "'", null);
         }
         catch (Exception e) {
             Toast.makeText(context, "Query to update lastactivated field failed "+e.getMessage(), Toast.LENGTH_LONG).show();
