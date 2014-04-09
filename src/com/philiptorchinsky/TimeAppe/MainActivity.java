@@ -41,6 +41,7 @@ public class MainActivity extends ListActivity {
 
 
         int i = 0;
+
         c.moveToFirst();
         if (!c.isAfterLast()) {
             do {
