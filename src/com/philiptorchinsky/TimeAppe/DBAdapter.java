@@ -135,6 +135,7 @@ public class DBAdapter {
         args.put(KEY_TIMESPENT, timespent);
         try {
             db.update(DATABASE_TABLE,args,KEY_PROJECT + "='" + StringEscapeUtils.escapeJava(project) + "'",null);
+
         }
         catch (Exception e) {
             Toast.makeText(context, "Query to update timespent field failed "+e.getMessage(), Toast.LENGTH_LONG).show();
