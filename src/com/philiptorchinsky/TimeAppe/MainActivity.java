@@ -69,7 +69,7 @@ public class MainActivity extends ListActivity {
         long secondsSpent = item.getSecondsSpent();
         long lastActivated = item.getLastactivated();
 
-
+      //when
         if (status.equalsIgnoreCase("active")) {
             status = "inactive";
             item.setStatus(status);
