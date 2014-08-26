@@ -24,7 +24,7 @@ android {
     defaultConfig {
         minSdkVersion 7
         targetSdkVersion 19
-        testApplicationId "com.philiptorchinsky.TimeAppe.tests"
+        testPackageName "com.philiptorchinsky.TimeAppe.tests"
     }
 
     sourceSets {
