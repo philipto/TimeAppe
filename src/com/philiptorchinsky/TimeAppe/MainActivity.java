@@ -40,7 +40,7 @@ public class MainActivity extends ListActivity {
         Cursor c = dh.getAll();
 
 
-        int i = 77;
+        int i = 17;
 
         c.moveToFirst();
         if (!c.isAfterLast()) {
