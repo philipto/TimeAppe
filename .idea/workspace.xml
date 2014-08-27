@@ -920,7 +920,19 @@
       <option name="project" value="LOCAL" />
       <updated>1409129525823</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="#AA-47 assignee philipto">
+      <created>1409129851270</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1409129851271</updated>
+    </task>
+    <task id="LOCAL-00051" summary="#AA-47 fixed">
+      <created>1409130688416</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1409130688416</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -978,8 +990,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="#AA-15 fixed&#10;6 replaced with 0&#10;" />
-    <MESSAGE value="#AA-19 fixed&#10;0 replaced with 2&#10;" />
     <MESSAGE value="#AA-19 fixed&#10;6 replaced with 2&#10;" />
     <MESSAGE value="#AA-22 fixed&#10;2 replaced with 1&#10;" />
     <MESSAGE value="test&#10;" />
@@ -1003,7 +1013,9 @@
     <MESSAGE value="1" />
     <MESSAGE value="#AA-47 Fixed&#10;changed to 4" />
     <MESSAGE value="#AA-47 fixed&#10;changed to 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="#AA-47 fixed&#10;changed to 4" />
+    <MESSAGE value="#AA-47 assignee philipto" />
+    <MESSAGE value="#AA-47 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="#AA-47 fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
